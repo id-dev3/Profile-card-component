@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #19a1ad;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.banner {
+    position: absolute;
+    width: 80%;
+    top: -75%;
+    left: -35%;
+    z-index: -1;
+}
+
+.banner1 {
+    position: absolute;
+    width: 80%;
+    bottom: -95%;
+    z-index: -2;
+    right: -29%;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5rem 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    /* justify-items: center; */
+    grid-template-areas:
+      "image"
+      "hero-image"
+      "bio"
+      "stats";
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.05);;
+    background-color: #fff;
+    border-radius: 16px;
+    min-width: 22rem;
+    min-height: 25rem;
+}
+  
+.image { grid-area: image; }
+
+.hero-image { grid-area: hero-image; }
+
+.bio { grid-area: bio; }
+  
+.stats {  
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "first second third";
+    grid-area: stats;
+    margin-top: 0.800rem;
+}
+  
+.first {
+    justify-self: center;
+    align-self: center;
+    grid-area: first;
+    margin-left: 2.5rem;
+}
+  
+.second {
+    justify-self: center;
+    align-self: center;
+    grid-area: second;
+}
+  
+.third {
+    justify-self: center;
+    align-self: center;
+    grid-area: third;
+    margin-right: 2.5rem;
+}
+
+.image1 {
+    min-width: 22rem;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    width: 100%;
+}
+
+.hero-img {
+    position: relative;
+    top: -4.900rem;
+    min-width: 8rem;
+    border-radius: 64px;
+    border: 5px solid #fff;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #33363f;
+    text-align: center;
+    margin-bottom: 0.800rem;
+}
+
+.number {
+    color: #959598;
+}
+
+.london {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #959598;
+    text-align: center;
+}
+
+hr {
+    background-color: #e2e2e6;
+    color: #e2e2e6;
+    height: 0px;
+    min-width: 21.8rem;
+    margin-top: 1.3rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: #33363f;
+    text-align: center;
+}
+
+.title {
+    color: #959598;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 15%, 13%); 
+}
+
+footer {
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    color: #f9f9f9;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        width: 100%;
+        top: -15%;
+        left: -50%;
+    }
+    .banner1 {
+        width: 100%;
+        right: -50%;
+        bottom: -15%;
+    }
+}
